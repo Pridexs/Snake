@@ -7,12 +7,6 @@ public class SpawnFruits : MonoBehaviour {
 
 	private int nFruits = 0;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		if (GameObject.FindGameObjectWithTag("Fruit") == null) {
 			createFruit();
@@ -23,6 +17,7 @@ public class SpawnFruits : MonoBehaviour {
 		GameObject[] snake = GameObject.FindGameObjectsWithTag ("SnakeBody");
 		bool intersects = false;
 		Vector3 position = new Vector3();
+		//This can be optimized.
 		do {
 			intersects = false;
 			int positionX = (int) (Random.value * 12);
